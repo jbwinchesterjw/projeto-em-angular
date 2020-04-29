@@ -1,0 +1,20 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <th>NOSSAS MODALIADES</th>
+
+        <tr>
+            <th>NOME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of modalidades; let i = index">
+            <td>{{m.nome}}</td>
+            <button class="btn btn-warning" (click)="editarModalidade()">Editar</button>
+            <button class="btn btn-danger" (click)="excluirModalidade(modalidades)">Excluir</button>
+        </tr>
+    </tbody>
+</table>
+
+
+<button class="btn btn-success" (click)="novaModalidade()">Nova Modalidade</button>
+<router-outlet></router-outlet>

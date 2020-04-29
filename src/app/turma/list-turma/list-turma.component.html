@@ -1,0 +1,20 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <th>NOSSAS TURMAS</th>
+
+        <tr>
+            <th>NOME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of turmas; let i = index">
+            <td>{{t.nome}}</td>
+            <button class="btn btn-warning" (click)="editarTurma()">Editar</button>
+            <button class="btn btn-danger" (click)="excluirTurma(turmas)">Excluir</button>
+        </tr>
+    </tbody>
+</table>
+
+
+<button class="btn btn-success" (click)="novaTruma()">Nova Turma</button>
+<router-outlet></router-outlet>

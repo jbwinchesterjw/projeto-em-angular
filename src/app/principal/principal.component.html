@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Arena Fitness</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Serviços</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a routerLink="/login">login</a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/list-professores">Professores</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/list-alunos">Alunos</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/list-modalidades">Modalidades</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/list-turmas">Turmas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <app-list-alunos *ngIf="!formulario3"></app-list-alunos>
+       
+        <app-list-professor *ngIf="!formulario1"></app-list-professor>
+
+        <app-list-modalidade *ngIf="!formulario2"></app-list-modalidade>
+
+        <app-list-turma *ngIf="!formulario4"></app-list-turma>
+        
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
